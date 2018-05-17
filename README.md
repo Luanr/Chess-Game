@@ -1,2 +1,2 @@
 # Chess-Game
-Simples Chess game with vanillaJS, Node.js and HTML
+Simple Chess game with vanillaJS, Node.js and HTML
