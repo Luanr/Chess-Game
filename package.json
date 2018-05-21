@@ -1,0 +1,14 @@
+{
+  "name": "trab_xadrez",
+  "version": "1.0.0",
+  "main": "servidor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ws": "^5.1.1"
+  }
+}

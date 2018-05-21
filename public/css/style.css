@@ -1,0 +1,62 @@
+div.users {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    border: 3px solid #969696cc;
+    background: #c2b5b5cc;
+}
+
+#login-container > img{
+	position:relative;
+	left:0%;	
+}
+
+#login-container{
+	position: fixed;
+	margin: 0 auto;
+	top:15%;
+	left: 30%;
+	width: 312px;
+	height: 450px;
+	border: 3px solid #969696cc;
+    justify-content: center;
+}
+
+
+#users-top {
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    color: #1f2886cc;
+    font-size: 30px;
+}
+
+#users-welcome {
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    color: #1f2836cc;
+    font-size: 27px;
+}
+
+#users-list {
+    font-family: Times New Roman, sans-serif;
+    font-weight: bold;
+    color: #292121cc;
+    font-size: 20px;
+}
+
+
+#login {
+	position: relative;
+	top: 20px;
+    font-family: Times New Roman, sans-serif;
+    font-weight: bold;
+    color: #292121cc;
+    font-size: 20px;
+}
+
+destaque{
+	color: #9933ff;
+	font-weight: italic;
+	font-size: 25px;
+}
