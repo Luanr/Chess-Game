@@ -1,39 +1,47 @@
 <!DOCTYPE html>
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 <html>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<head>
+    <title>Chess Game</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+</head>
 
 <body>
 
-<img id="board" style="display: none;" width="100" height="100"
-src="img/xadrez.png" z-index:0; alt="Tabuleiro">
+    <img id="board" style="display: none;" width="100" height="100" src="img/xadrez.png" z-index:0; alt="Tabuleiro">
 
-
-<canvas id="myCanvas" width="800" height="800"
-style="border:2px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.
-</canvas>
-
-<div id="login-container">
-  <img id="log_img" src="img/chess_thumb.png" z-index:0; alt="Tabuleiro">
-  <div id="login">
-      Digite seu login <input id="user"> <button id="entra-user">Login</button>
-  </div>
-</div>
-
-<div class="users" id="users-container">
-    <div id="users-top">
-        Usuários Conectados
+    <div id="login-container">
+        <h2>♝ Chess Game ♗</h2>
+        <img id="log_img" src="img/chess_thumb.png" z-index:0; alt="Tabuleiro">
+        <div id="login">
+            Digite seu login
+            <input id="user" placeholder="ID"/>
+            <button id="entra-user">Login</button>
+        </div>
     </div>
-    <div id="user-welcome">
+    <div class="container">
+        <canvas id="myCanvas" width="800" height="800" style="border:2px solid #d3d3d3;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+
+        <div class="users" id="users-container">
+            <div class="users-top">
+                ♝ Chess Game ♗
+            </div>
+            <div id="user-welcome">
+            </div>
+            <h2>Usuários conectados:</h2>
+            <div id="users-list">
+            </div>
+        </div>
     </div>
-    <div id="users-list">
-    </div>
-</div>
-  
-<script type="text/javascript" src="js/reconnecting-websocket.min.js"></script>
-<script type="text/javascript" src="js/game.js"></script>
-  
-  
+
+    <script type="text/javascript" src="js/reconnecting-websocket.min.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+
 </body>
+
 </html>
