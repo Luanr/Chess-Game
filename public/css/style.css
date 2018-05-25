@@ -1,62 +1,116 @@
-div.users {
-    position: fixed;
+body {
+    font-family: 'Yatra One', sans-serif;
+    background-color: #F5F5F6;
+}
+
+button {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    padding: 8px 16px;
+    background-color: #757575;
+    border: 0;
+    border-radius: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font: 500 14px/20px 'Yatra One',sans-serif;
+    height: 36px;
+    margin: 0;
+    min-width: 36px;
+    outline: 0;
+    overflow: hidden;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+}
+h3 {
+    font-size: 20px;
+}
+
+.users {
     right: 0;
     top: 0;
     width: 400px;
-    border: 3px solid #969696cc;
-    background: #c2b5b5cc;
+    padding-bottom: 15px;
+    background: #E1E2E1;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
 }
 
-#login-container > img{
-	position:relative;
-	left:0%;	
+.container {
+    display: flex;
 }
 
-#login-container{
-	position: fixed;
-	margin: 0 auto;
-	top:15%;
-	left: 30%;
-	width: 312px;
-	height: 450px;
-	border: 3px solid #969696cc;
+.conv_but {
+    height: 25px;
+    padding: 4px;
+}
+
+#login-container>img {
+    position: relative;
+    left: 0%;
+}
+
+#login-container {
+    margin: 0 auto;
+    top: 15%;
+    left: 30%;
+    width: 312px;
+    height: 535px;
     justify-content: center;
+    background-color: #E1E2E1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 3px;
 }
 
-
-#users-top {
-    font-family: Verdana, sans-serif;
-    font-weight: bold;
-    color: #1f2886cc;
-    font-size: 30px;
+.users-top {
+    background-color: #757575;
+    font-size: 25px;
+    height: 40px;
+    color: #ffffff;
+    padding-top: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.5);
 }
 
 #users-welcome {
-    font-family: Verdana, sans-serif;
     font-weight: bold;
     color: #1f2836cc;
     font-size: 27px;
 }
 
 #users-list {
-    font-family: Times New Roman, sans-serif;
     font-weight: bold;
     color: #292121cc;
     font-size: 20px;
 }
-
 
 #login {
-	position: relative;
-	top: 20px;
-    font-family: Times New Roman, sans-serif;
+    position: relative;
+    top: 20px;
     font-weight: bold;
     color: #292121cc;
     font-size: 20px;
+    padding: 20px;
 }
 
-destaque{
-	color: #9933ff;
-	font-weight: italic;
-	font-size: 25px;
+#user {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+destaque {
+    color: #9933ff;
+    font-size: 25px;
 }
