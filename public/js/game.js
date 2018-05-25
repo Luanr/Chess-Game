@@ -125,7 +125,7 @@ function bloqueiaTela() {
 
 function liberaTela() {
     //visibility='none' // o obj nao fica armazenado
-    O('login-container').style.visibility ='hidden';
+    O('login-container').style.display ='none';
     O('users-container').style.visibility ='visible';
     O('myCanvas').style.visibility ='visible';
 }
@@ -156,7 +156,7 @@ function onOpen(evt) {
     };
     websocket.send(JSON.stringify(MSG))
 
-    document.getElementById('user-welcome').innerHTML = "<br />Bem vindo <destaque>"+meuID.ID+"</destaque> <br /><br />";
+    document.getElementById('user-welcome').innerHTML = "<br/><h3>Bem vindo:</h3> <destaque>"+meuID.ID+"</destaque><br/>";
 }
 
 function onClose(evt) {
