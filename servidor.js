@@ -8,9 +8,9 @@ var partidas = [];
 const TIMEOUT = 10000;
 
 const wss = new WebSocket.Server({
-    port: process.env.PORT || 8080
+    port: 443
 }, function () {
-    console.log(`SERVIDOR WEBSOCKETS na porta ${process.env.PORT || 8080}`);
+    console.log(`SERVIDOR WEBSOCKETS na porta 443`);
 });
 
 
@@ -277,7 +277,7 @@ app.get(/^(.+)$/, function (req, res) {
     }
 })
 
-app.listen(process.env.PORT || 8080, function () {
+app.listen(80, function () {
     console.log(`SERVIDOR WEB na porta ${process.env.PORT || 8080}`);
 });
 
