@@ -68,7 +68,7 @@ window.onload = function() {
 
 
 
-servidorWebserver = window.location.protocol.replace('http', 'ws') + '//' + window.location.hostname + ':443';
+servidorWebserver = window.location.protocol.replace('http', 'ws') + '//' + window.location.hostname + ':80';
 
 //startConnection(meuID);
 verificaBDLocal();

@@ -1,15 +1,18 @@
 var express = require('express')
 var app = express();
 var bodyParser = require('body-parser');
-const WebSocket = require('ws');
+const { Server } = require('ws');
 var vetorClientes = [];
 var partidas = [];
 
 const TIMEOUT = 10000;
+const PORT = process.env.PORT || 3000;
 
-const wss = new WebSocket.Server(function () {
-    console.log(`SERVIDOR WEBSOCKETS ON`);
-});
+const app = express()
+  .use(express.static(__dirname + '/public'))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+const wss = new Server({ server });
 
 function criaTabuleiro() {
 
@@ -256,8 +259,6 @@ function procuraPartida(player) { // retorna partida que o usr esta
 
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + '/public'));
-
 app.get('/', function (req, resp) {
     resp.write("teste");
     resp.end();
@@ -273,10 +274,6 @@ app.get(/^(.+)$/, function (req, res) {
         res.end();
     }
 })
-
-app.listen(process.env.PORT || 3000, function () {
-    console.log(`SERVIDOR WEB na porta ${process.env.PORT || 3000}`);
-});
 
 atualizaUsers();
 setInterval(PERIODICA, 10000);
