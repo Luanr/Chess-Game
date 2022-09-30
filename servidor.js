@@ -1,5 +1,4 @@
 var express = require('express')
-var app = express();
 var bodyParser = require('body-parser');
 const { Server } = require('ws');
 var vetorClientes = [];
