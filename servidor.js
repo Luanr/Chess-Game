@@ -11,7 +11,7 @@ const app = express()
   .use(express.static(__dirname + '/public'))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
-const wss = new Server({ server });
+const wss = new Server({ app });
 
 function criaTabuleiro() {
 
