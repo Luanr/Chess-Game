@@ -7,12 +7,6 @@ var partidas = [];
 
 const TIMEOUT = 10000;
 
-const wss = new WebSocket.Server({
-    port: 443
-}, function () {
-    console.log(`SERVIDOR WEBSOCKETS na porta 443`);
-});
-
 
 function criaTabuleiro() {
 
@@ -279,6 +273,10 @@ app.get(/^(.+)$/, function (req, res) {
 
 app.listen(process.env.PORT || 8080, function () {
     console.log(`SERVIDOR WEB na porta ${process.env.PORT || 8080}`);
+});
+
+const wss = new WebSocket.Server(function () {
+    console.log(`SERVIDOR WEBSOCKETS ON`);
 });
 
 atualizaUsers();
