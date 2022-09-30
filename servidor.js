@@ -22,7 +22,7 @@ const app = express()
             res.end();
         }
   })
-  .listen(3000, () => console.log(`Listening on 3000`));
+  .listen(80, () => console.log(`Listening on 3000`));
 
 const wss = new Server({ port: PORT },{ app });
 
