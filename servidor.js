@@ -5,13 +5,29 @@ var vetorClientes = [];
 var partidas = [];
 
 const TIMEOUT = 10000;
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 const app = express()
   .use(express.static(__dirname + '/public'))
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+  .use(bodyParser.json)
+  .get('/', function (req, resp) {
+    resp.write("teste");
+    resp.end();
+  })
+  .get(/^(.+)$/, function (req, res) {
+        try {
+            res.write("A pagina que vc busca nao existe")
+            res.end();
+        } catch (e) {
+            res.end();
+        }
+  })
+  .listen(3000, () => console.log(`Listening on 3000`));
 
-const wss = new Server({ app });
+const wss = new Server({ port: PORT },{ app });
+
+console.log('http on 8080')
+console.log(`ws on ${PORT}`)
 
 function criaTabuleiro() {
 
@@ -255,24 +271,6 @@ function procuraPartida(player) { // retorna partida que o usr esta
 
 // fim de funcoes sobre o tabuleiro
 
-
-app.use(bodyParser.json());
-
-app.get('/', function (req, resp) {
-    resp.write("teste");
-    resp.end();
-});
-
-
-
-app.get(/^(.+)$/, function (req, res) {
-    try {
-        res.write("A pagina que vc busca nao existe")
-        res.end();
-    } catch (e) {
-        res.end();
-    }
-})
 
 atualizaUsers();
 setInterval(PERIODICA, 10000);
